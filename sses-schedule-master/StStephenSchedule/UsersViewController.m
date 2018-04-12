@@ -39,6 +39,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
 
     
     UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goback)];
@@ -56,6 +65,15 @@
     [self.userTypeSegment setTitle:NSLocalizedString(@"Middle", nil) forSegmentAtIndex:1];
     [self.personTypeSegment setTitle:NSLocalizedString(@"Student", nil) forSegmentAtIndex:0];
     [self.personTypeSegment setTitle:NSLocalizedString(@"Teacher", nil) forSegmentAtIndex:1];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
 
     
     if ([[passedData objectForKey:kSettingsUsersPassedDataUserName] isEqualToString:@""]) {
@@ -81,7 +99,16 @@
 }
 
 - (void)didReceiveMemoryWarning
-{
+{    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -110,7 +137,16 @@
         [self presentViewController:alert animated:YES completion:nil];
         return;
     }
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     if ([delegate isKindOfClass:[SettingView class]]) {
         NSString *name = self.userNameTextField.text;
         if (![name isEqualToString:self.userNameHolder]) {
@@ -144,6 +180,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void) goback {
+ 
     if ([[self.passedData objectForKey:kSettingsUsersPassedDataIsNew]boolValue]) {
         //delete new user
         [[(SettingView *)delegate users] removeObjectsAtIndexes:[NSIndexSet indexSetWithIndex:[[self.passedData objectForKey:kSettingsUsersPassedDataIndex] integerValue]]];
@@ -155,7 +192,16 @@
         return;
     }
     
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     self.userNameHolder = nil;
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -166,10 +212,30 @@
 }
 
 - (IBAction)viewTouched:(UIControl *)sender {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     [userNameTextField resignFirstResponder];
 }
 
 - (IBAction)userTypeSegmentValueChanged:(UISegmentedControl *)sender {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     if ([[passedData objectForKey:kSettingsUsersPassedDataIsNew]boolValue]) { // new 
         [self.userDataBuffer setObject:[NSNumber numberWithInteger:sender.selectedSegmentIndex] forKey:kUserDataKeyUserSchoolSection];
     }
@@ -192,6 +258,7 @@
 }
 
 - (IBAction)personTypeSegmentValueChanged:(UISegmentedControl *)sender {
+ 
     [self.userDataBuffer setObject:[NSNumber numberWithInteger:sender.selectedSegmentIndex] forKey:kUserDataKeyUserPersonType];
 }
 

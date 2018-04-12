@@ -73,7 +73,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(doneButtonPressed)];
     [customBarItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.rightBarButtonItem = customBarItem;
@@ -103,7 +112,16 @@
         });
         
     });
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     
     NSDictionary *dictionary = nil;
     if (![[NSFileManager defaultManager]fileExistsAtPath:[self classesDataFilePath]]) {
@@ -171,13 +189,31 @@
         
     }
 
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
 
     
 }
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+{    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
@@ -199,13 +235,31 @@
     }
 }
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    if (component==0) {
+    if (component==0) {    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
+        
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
         return [classCategory objectAtIndex:row];
     }
     else {
         NSInteger categoryRow=[pickerView selectedRowInComponent:0];
         NSString *categoryName=[self.classCategory objectAtIndex:categoryRow];
+        [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
         
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
         self.specifiedClasses = [self.classesData objectForKey:categoryName];
         if (row <= [self.specifiedClasses count]) {
             return [self.specifiedClasses objectAtIndex:row];
@@ -223,7 +277,16 @@
     if (component==0) {
         NSInteger categoryRow=[pickerView selectedRowInComponent:0];
         NSString *categoryName=[self.classCategory objectAtIndex:categoryRow];
+        [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
         
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
         self.specifiedClasses=[self.classesData objectForKey:categoryName];
         [pickerView reloadComponent:1];
         [pickerView selectRow:0 inComponent:1 animated:YES];
@@ -244,7 +307,16 @@
     if ([delegate respondsToSelector:@selector(setEditedDataFromPicker:)]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"You are about to create a class" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+        [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
         
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
         [alert addAction:[UIAlertAction actionWithTitle:@"For All Days" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
             // For All Days
             if ([delegate respondsToSelector:@selector(setEditedDataFromPicker:)]) {
@@ -325,10 +397,21 @@
 }
 
 - (IBAction)locationFieldDone:(UITextField *)sender {
+ 
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
 }
 
 - (IBAction)backgroundTouched {
+ 
     [teacherTextField resignFirstResponder];
     [locationTextField resignFirstResponder];
 }

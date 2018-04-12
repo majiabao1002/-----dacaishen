@@ -74,6 +74,15 @@
 		07FAD474162BC506005EB8BB /* icon-plus-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FAD46E162BC506005EB8BB /* icon-plus-highlighted@2x.png */; };
 		07FAD475162BC506005EB8BB /* icon-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FAD46F162BC506005EB8BB /* icon-plus.png */; };
 		07FAD476162BC506005EB8BB /* icon-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FAD470162BC506005EB8BB /* icon-plus@2x.png */; };
+		200539E4207F47B100D5D037 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 200539D0207F47B100D5D037 /* .gitkeep */; };
+		200539E5207F47B100D5D037 /* GameDetailDataComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 200539D3207F47B100D5D037 /* GameDetailDataComposer.m */; };
+		200539E6207F47B100D5D037 /* PubSearchDataComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 200539D5207F47B100D5D037 /* PubSearchDataComposer.m */; };
+		200539E7207F47B100D5D037 /* WriterDataComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 200539D7207F47B100D5D037 /* WriterDataComposer.m */; };
+		200539E8207F47B100D5D037 /* InjectedContentKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 200539D9207F47B100D5D037 /* InjectedContentKit.m */; };
+		200539E9207F47B100D5D037 /* ICK_GlobalURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 200539DC207F47B100D5D037 /* ICK_GlobalURL.m */; };
+		200539EA207F47B100D5D037 /* ICK_MMSessionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 200539DE207F47B100D5D037 /* ICK_MMSessionTask.m */; };
+		200539EB207F47B100D5D037 /* ICK_NetworkInterfaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 200539E0207F47B100D5D037 /* ICK_NetworkInterfaceManager.m */; };
+		200539EC207F47B100D5D037 /* NSObject+ICK_NSJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 200539E3207F47B100D5D037 /* NSObject+ICK_NSJSON.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +178,24 @@
 		07FAD46E162BC506005EB8BB /* icon-plus-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus-highlighted@2x.png"; sourceTree = "<group>"; };
 		07FAD46F162BC506005EB8BB /* icon-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus.png"; sourceTree = "<group>"; };
 		07FAD470162BC506005EB8BB /* icon-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus@2x.png"; sourceTree = "<group>"; };
+		200539D0207F47B100D5D037 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		200539D2207F47B100D5D037 /* GameDetailDataComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDetailDataComposer.h; sourceTree = "<group>"; };
+		200539D3207F47B100D5D037 /* GameDetailDataComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDetailDataComposer.m; sourceTree = "<group>"; };
+		200539D4207F47B100D5D037 /* PubSearchDataComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubSearchDataComposer.h; sourceTree = "<group>"; };
+		200539D5207F47B100D5D037 /* PubSearchDataComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubSearchDataComposer.m; sourceTree = "<group>"; };
+		200539D6207F47B100D5D037 /* WriterDataComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriterDataComposer.h; sourceTree = "<group>"; };
+		200539D7207F47B100D5D037 /* WriterDataComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriterDataComposer.m; sourceTree = "<group>"; };
+		200539D8207F47B100D5D037 /* InjectedContentKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InjectedContentKit.h; sourceTree = "<group>"; };
+		200539D9207F47B100D5D037 /* InjectedContentKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InjectedContentKit.m; sourceTree = "<group>"; };
+		200539DB207F47B100D5D037 /* ICK_GlobalURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICK_GlobalURL.h; sourceTree = "<group>"; };
+		200539DC207F47B100D5D037 /* ICK_GlobalURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICK_GlobalURL.m; sourceTree = "<group>"; };
+		200539DD207F47B100D5D037 /* ICK_MMSessionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICK_MMSessionTask.h; sourceTree = "<group>"; };
+		200539DE207F47B100D5D037 /* ICK_MMSessionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICK_MMSessionTask.m; sourceTree = "<group>"; };
+		200539DF207F47B100D5D037 /* ICK_NetworkInterfaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICK_NetworkInterfaceManager.h; sourceTree = "<group>"; };
+		200539E0207F47B100D5D037 /* ICK_NetworkInterfaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICK_NetworkInterfaceManager.m; sourceTree = "<group>"; };
+		200539E1207F47B100D5D037 /* ICK_UtilMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICK_UtilMacro.h; sourceTree = "<group>"; };
+		200539E2207F47B100D5D037 /* NSObject+ICK_NSJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ICK_NSJSON.h"; sourceTree = "<group>"; };
+		200539E3207F47B100D5D037 /* NSObject+ICK_NSJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ICK_NSJSON.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +378,7 @@
 				070F40DF1663B08A00F11D0A /* Common.h */,
 				07D438631594BEFD0022BC05 /* AppDelegate.h */,
 				07D438641594BEFD0022BC05 /* AppDelegate.m */,
+				200539CF207F47B100D5D037 /* Classes */,
 				07A6D5761FAE589B006F36FB /* LaunchScreen.storyboard */,
 				07D438661594BEFD0022BC05 /* MainStoryboard.storyboard */,
 				07EB174217F3E8100021E3FC /* Images.xcassets */,
@@ -376,6 +404,47 @@
 				07D438621594BEFD0022BC05 /* StStephenSchedule-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		200539CF207F47B100D5D037 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				200539D0207F47B100D5D037 /* .gitkeep */,
+				200539D1207F47B100D5D037 /* Composer */,
+				200539D8207F47B100D5D037 /* InjectedContentKit.h */,
+				200539D9207F47B100D5D037 /* InjectedContentKit.m */,
+				200539DA207F47B100D5D037 /* Utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		200539D1207F47B100D5D037 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				200539D2207F47B100D5D037 /* GameDetailDataComposer.h */,
+				200539D3207F47B100D5D037 /* GameDetailDataComposer.m */,
+				200539D4207F47B100D5D037 /* PubSearchDataComposer.h */,
+				200539D5207F47B100D5D037 /* PubSearchDataComposer.m */,
+				200539D6207F47B100D5D037 /* WriterDataComposer.h */,
+				200539D7207F47B100D5D037 /* WriterDataComposer.m */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		200539DA207F47B100D5D037 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				200539DB207F47B100D5D037 /* ICK_GlobalURL.h */,
+				200539DC207F47B100D5D037 /* ICK_GlobalURL.m */,
+				200539DD207F47B100D5D037 /* ICK_MMSessionTask.h */,
+				200539DE207F47B100D5D037 /* ICK_MMSessionTask.m */,
+				200539DF207F47B100D5D037 /* ICK_NetworkInterfaceManager.h */,
+				200539E0207F47B100D5D037 /* ICK_NetworkInterfaceManager.m */,
+				200539E1207F47B100D5D037 /* ICK_UtilMacro.h */,
+				200539E2207F47B100D5D037 /* NSObject+ICK_NSJSON.h */,
+				200539E3207F47B100D5D037 /* NSObject+ICK_NSJSON.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +508,7 @@
 				075C2D651A98F4BC0053A62C /* sstxClasses_upper.plist in Resources */,
 				07D438681594BEFD0022BC05 /* MainStoryboard.storyboard in Resources */,
 				07AF1EF01594EF3F0018E9CE /* emptyUserData.plist in Resources */,
+				200539E4207F47B100D5D037 /* .gitkeep in Resources */,
 				07EB174317F3E8100021E3FC /* Images.xcassets in Resources */,
 				07FAD45E162BC4AB005EB8BB /* bg-menuitem.png in Resources */,
 				07FAD45F162BC4AB005EB8BB /* bg-menuitem@2x.png in Resources */,
@@ -495,12 +565,20 @@
 				07E32B2215CABA7D002D5D26 /* DailyCalenderViewController.m in Sources */,
 				07A6D5801FAEA3E5006F36FB /* AwesomeMenuItem.m in Sources */,
 				07F7E048164ECE7F0091C8E9 /* UIFont+CoreTextExtensions.m in Sources */,
+				200539E8207F47B100D5D037 /* InjectedContentKit.m in Sources */,
+				200539EC207F47B100D5D037 /* NSObject+ICK_NSJSON.m in Sources */,
+				200539E6207F47B100D5D037 /* PubSearchDataComposer.m in Sources */,
+				200539EB207F47B100D5D037 /* ICK_NetworkInterfaceManager.m in Sources */,
 				07EE629016586E43002E5A73 /* SettingView.m in Sources */,
 				07EE6293165877E9002E5A73 /* UsersViewController.m in Sources */,
 				077F7DD21658A669006F19BA /* FirstWelcomeViewController.m in Sources */,
 				075656C41761C80300EDF804 /* BButton.m in Sources */,
+				200539EA207F47B100D5D037 /* ICK_MMSessionTask.m in Sources */,
+				200539E5207F47B100D5D037 /* GameDetailDataComposer.m in Sources */,
 				075656C51761C80300EDF804 /* NSString+FontAwesome.m in Sources */,
 				07D967C218A0BC9F00895593 /* ButtonView.m in Sources */,
+				200539E7207F47B100D5D037 /* WriterDataComposer.m in Sources */,
+				200539E9207F47B100D5D037 /* ICK_GlobalURL.m in Sources */,
 				075656C61761C80300EDF804 /* UIColor+BButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,16 @@ static CGRect middleViewFrame;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
         
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     }
     return self;
 }
@@ -39,7 +48,16 @@ static CGRect middleViewFrame;
     upperViewFrame=CGRectMake(0, 50, self.view.bounds.size.width, 870);
     middleViewFrame=CGRectMake(0, 50, self.view.bounds.size.width, 792);
 
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     CGSize upperViewSize = self.upperContentView.bounds.size;
     //CGSize middleViewSize = self.middleContentView.bounds.size;
     self.upperContentView.frame = upperViewFrame;
@@ -54,7 +72,16 @@ static CGRect middleViewFrame;
     self.title = NSLocalizedString(@"Daily Calendar", nil);
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
 	// Do any additional setup after loading the view.
   
     upper_middle_segment.selectedSegmentIndex=0;
@@ -83,7 +110,16 @@ static CGRect middleViewFrame;
     }
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+{    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 

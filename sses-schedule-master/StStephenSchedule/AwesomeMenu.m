@@ -93,35 +93,43 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 #pragma mark - Images
 
 - (void)setImage:(UIImage *)image {
+ [NSArray new];
 	self.startButton.image = image;
 }
 
 - (UIImage*)image {
+ [NSArray new];
 	return self.startButton.image;
 }
 
 - (void)setHighlightedImage:(UIImage *)highlightedImage {
+ [NSArray new];
 	self.startButton.highlightedImage = highlightedImage;
 }
 
 - (UIImage*)highlightedImage {
+ [NSArray new];
 	return self.startButton.highlightedImage;
 }
 
 
 - (void)setContentImage:(UIImage *)contentImage {
+ [NSArray new];
 	self.startButton.contentImageView.image = contentImage;
 }
 
 - (UIImage*)contentImage {
+ [NSArray new];
 	return self.startButton.contentImageView.image;
 }
 
 - (void)setHighlightedContentImage:(UIImage *)highlightedContentImage {
+ [NSArray new];
 	self.startButton.contentImageView.highlightedImage = highlightedContentImage;
 }
 
 - (UIImage*)highlightedContentImage {
+ [NSArray new];
 	return self.startButton.contentImageView.highlightedImage;
 }
 
@@ -246,6 +254,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 }
 
 - (void)_setMenu {
+ [NSArray new];
 	NSUInteger count = [self.menuItems count];
     for (int i = 0; i < count; i ++)
     {
@@ -405,6 +414,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     _flag --;
 }
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+ [NSArray new];
     if([[anim valueForKey:@"id"] isEqual:@"lastAnimation"]) {
         if(self.delegate && [self.delegate respondsToSelector:@selector(awesomeMenuDidFinishAnimationClose:)]){
             [self.delegate awesomeMenuDidFinishAnimationClose:self];

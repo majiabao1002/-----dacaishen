@@ -18,7 +18,16 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // Custom initialization    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
+        
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     }
     return self;
 }
@@ -30,7 +39,16 @@
     [self.doneButton.layer setBorderColor:[UIColor whiteColor].CGColor];
     self.doneButton.layer.borderWidth = 1.0;
     self.doneButton.layer.cornerRadius = 5;
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
 	// Do any additional setup after loading the view.
 }
 
@@ -41,6 +59,16 @@
 }
 
 - (IBAction)schoolSectionValueChanged:(UISegmentedControl *)sender {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     [UIView beginAnimations:@"show done" context:nil];
     [UIView setAnimationDuration:0.3];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
@@ -50,12 +78,31 @@
 }
 
 - (IBAction)buttonPressed:(UIButton *)sender {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     SET_USER_DEFAULT([NSNumber numberWithInteger:self.schoolSectionSegment.selectedSegmentIndex], kUserDefaultsKeyUserTypeSchoolSection);
 
     NSDictionary *dictionary = GENERATE_USER_DATA_DICTIONARY([NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"emptyUserData" withExtension:@"plist"]], CURRENT_USER_NAME, SCHOOL_SECTION, PERSON_TYPE);
     NSString *filePath = PATH_FOR_DATA_OF_USER(CURRENT_USER_NAME);
     [dictionary writeToFile:filePath atomically:YES];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

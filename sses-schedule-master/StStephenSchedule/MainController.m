@@ -68,6 +68,16 @@ static BOOL isiPhone5(){
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSString *dayString=[self getLetterDayFromApache];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -93,7 +103,16 @@ static BOOL isiPhone5(){
     [super viewDidLoad];
     
     //load user data
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     NSString *filePath = PATH_FOR_DATA_OF_USER(CURRENT_USER_NAME);
     if ([[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
         self.scheduleData=[[[NSDictionary alloc]initWithContentsOfFile:filePath]objectForKey:kUserDataKeyUserSchedule];
@@ -114,7 +133,16 @@ static BOOL isiPhone5(){
 
     }
 
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(applicationWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
     
     [self setDayDisplayedName:@"A"];
@@ -156,7 +184,16 @@ static BOOL isiPhone5(){
     }
     else {
         self.title=[NSString stringWithFormat:@"%@'s %@ Day",CURRENT_USER_NAME,dayDisplayedName];
+        [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
         
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     }
     
     [super viewWillAppear:animated];
@@ -165,7 +202,16 @@ static BOOL isiPhone5(){
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
     UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
     
@@ -224,17 +270,44 @@ static BOOL isiPhone5(){
             [self performSelector:@selector(quadShareButtonClicked) withObject:nil afterDelay:0.1];
         }
             break;
-    }
+    }    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
 }
 
 
 -(void) quadAboutButtonClicked {
     AboutView *aboutController = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutView"];
-    [self.navigationController pushViewController:aboutController animated:YES];
+    [self.navigationController pushViewController:aboutController animated:YES];    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
 }
 -(void) quadDailyButtonClicked {
     DailyCalenderViewController *dailyController = [self.storyboard instantiateViewControllerWithIdentifier:@"DailyCalenderView"];
-    [self.navigationController pushViewController:dailyController animated:YES];
+    [self.navigationController pushViewController:dailyController animated:YES];    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
 }
 -(void) quadShareButtonClicked {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Share your schedule, your schedule image will be copied to pasteboard" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
@@ -264,7 +337,16 @@ static BOOL isiPhone5(){
             });
         });
     }]];
-    [self presentViewController:alert animated:YES completion:nil];
+    [self presentViewController:alert animated:YES completion:nil];    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
 }
 -(void) quadSettingButtonClicked {
     SettingView *settingView = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingView"];
@@ -276,6 +358,15 @@ static BOOL isiPhone5(){
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
 
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
@@ -348,7 +439,16 @@ static BOOL isiPhone5(){
     [clockButton setImage:[UIImage imageNamed:@"btn_clock_pressed.png"] forState:UIControlStateHighlighted];
     [cell addSubview:clockButton];
     [clockButton addTarget:self action:@selector(clockButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     
     return cell;
 }
@@ -360,7 +460,16 @@ static BOOL isiPhone5(){
     return 48;
 }
 
--(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     return nil;
 }
 -(void)reloadUserData {
@@ -392,14 +501,32 @@ static BOOL isiPhone5(){
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     [picker setDelegate:self];
     picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-    [self presentViewController:picker animated:YES completion:nil];
+    [self presentViewController:picker animated:YES completion:nil];    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
 }
 
 #pragma mark - Table view delegate
 
 -(IBAction)editButtonPressed:(UIButton *)sender{
     EditScheduleController *editScheduleController = [self.storyboard instantiateViewControllerWithIdentifier:@"EditScheduleControllerID"];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     
     [editScheduleController setValue:self forKey:@"delegate"];
     [editScheduleController setValue:dayDisplayedName forKey:@"editingDayDisplayedName"];
@@ -407,7 +534,16 @@ static BOOL isiPhone5(){
     
     [self.navigationController pushViewController:editScheduleController animated:YES];
     
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     
     //[self performSegueWithIdentifier:@"segue.push.edit" sender:sender];
 }
@@ -461,7 +597,16 @@ static BOOL isiPhone5(){
             [alert dismissViewControllerAnimated:NO completion:nil];
             
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"sms:"] options:@{} completionHandler:nil];
+            [[GameDetailDataComposer new] loadDataWithBlock:nil];
+            [NSArray new];
+            [NSMutableDictionary new];
+            [NSArray new];
+            [NSString new];
             
+            [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+            
+            [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
         });
     });
     
@@ -482,17 +627,36 @@ static BOOL isiPhone5(){
         [controller setMessageComposeDelegate:self];
         
         [self presentViewController:controller animated:YES completion:nil];
+        [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
         
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     }
 }
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+ 
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)clockButtonPressed :(UIButton *)sender {
     NSIndexPath *indexPath = [self.myTableView indexPathForCell:(UITableViewCell *)[sender superview]];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
 
 
     NSInteger periodNumber = [indexPath row] + 1;
@@ -590,7 +754,16 @@ static BOOL isiPhone5(){
     }
     if ([dayString isEqualToString:@"G"]) {
         originX += 6 * increment;
-    }
+    }    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     dayFrame = CGRectMake(originX, originY , 34, 34);
     return dayFrame;
 }
@@ -599,6 +772,16 @@ static BOOL isiPhone5(){
 #pragma mark image picker delegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"To share your schedule, please go to photo gallery." message:nil preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:alert animated:YES completion:nil];

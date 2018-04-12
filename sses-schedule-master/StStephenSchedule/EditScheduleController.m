@@ -60,6 +60,16 @@
     [self saveData];
 }
 - (void) gobackButtonClicked {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     if ([self.isEdited boolValue]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Back without saving?" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
@@ -81,6 +91,15 @@
 
 -(void)dealloc {
     //[super dealloc];
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
 
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIApplicationWillResignActiveNotification
@@ -92,7 +111,16 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+{    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     // Return the number of sections.
     return 1;
 }
@@ -112,7 +140,16 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     static NSString *EditClassCell=@"EditClassCellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:EditClassCell];
     if (cell==nil) {
@@ -159,7 +196,16 @@
     if ([destination respondsToSelector:@selector(setDelegate:)]) {
         [destination setValue:self forKey:@"delegate"];
     }
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
     
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     if ([destination respondsToSelector:@selector(setSelectedData:)]) {
         UITableViewCell *cell = [self.editingTableView cellForRowAtIndexPath:indexPath];
         UILabel *classNameLabel=(UILabel *)[cell viewWithTag:2];
@@ -247,7 +293,16 @@
 }
 
 -(void)saveData
-{
+{    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
     if (isEdited) {
         [self.editedSchedule removeObjectForKey:editingDayDisplayedName];
         [self.editedSchedule setObject:currentEditedDaySchedule forKey:editingDayDisplayedName];
@@ -272,7 +327,16 @@
  
 -(void)setEditedDataFromPicker:(NSDictionary *)editedData {
     if (![editedData isEqual:editedDataFromPicker]) {
-            editedDataFromPicker=editedData;
+        editedDataFromPicker=editedData;    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+        [NSArray new];
+        [NSMutableDictionary new];
+        [NSArray new];
+        [NSString new];
+        
+        [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+        
+        [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
         NSIndexPath *indexPath=[editedData objectForKey:@"indexPath"];
         NSInteger periodNumber=[indexPath row]+1;
         NSString *periodName=[NSString stringWithFormat:@"%ld",(long)periodNumber];
@@ -325,11 +389,31 @@
     self.editNavigationItem.title=[NSString stringWithFormat:@"Edit %@ Day",editingDayDisplayedName];
     [self.editingTableView reloadData];
     
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
+
+    
 }
 #pragma mark - get data
 
 -(void)rotationFromEditedData: (NSDictionary *)editedData {
     //class info
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
     NSString *newClassName=[editedData objectForKey:@"className"];
     NSString *newTeacherName=[editedData objectForKey:@"teacherName"];
     NSString *newLocationName=[editedData objectForKey:@"locationName"];
@@ -354,6 +438,15 @@
         classNeededChangesDictionary=[NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"classNeededChanges_middle" withExtension:@"plist"]];
     }
     
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
     NSArray *classNeedChanges=[classNeededChangesDictionary objectForKey:originalClassID];
     //make changes
     for (NSString *classTagString in classNeedChanges) {

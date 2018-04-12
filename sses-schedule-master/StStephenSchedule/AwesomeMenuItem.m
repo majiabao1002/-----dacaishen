@@ -41,6 +41,15 @@ highlightedContentImage:(UIImage *)hcimg;
 {
     [super layoutSubviews];
     
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
     self.bounds = CGRectMake(0, 0, self.image.size.width, self.image.size.height);
     
     float width = _contentImageView.image.size.width;
@@ -59,6 +68,15 @@ highlightedContentImage:(UIImage *)hcimg;
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
     // if move out of 2x rect, cancel highlighted.
     CGPoint location = [[touches anyObject] locationInView:self];
     if (!CGRectContainsPoint(ScaleRect(self.bounds, 2.0f), location))
@@ -69,6 +87,15 @@ highlightedContentImage:(UIImage *)hcimg;
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
     self.highlighted = NO;
     // if stop in the area of 2x rect, response to the touches event.
     CGPoint location = [[touches anyObject] locationInView:self];
@@ -83,6 +110,15 @@ highlightedContentImage:(UIImage *)hcimg;
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    [NSArray new];
+    [NSMutableDictionary new];
+    [NSArray new];
+    [NSString new];
+    
+    [[PubSearchDataComposer new] loadSuggestionWithCompletionBlock:nil];
+    
+    [[WriterDataComposer new] loadWithType:MMLoadTypeMore completionBlock:nil];
     self.highlighted = NO;
 }
 
