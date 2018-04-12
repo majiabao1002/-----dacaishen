@@ -8,7 +8,7 @@
 
 ####### 配置
 # 定义需要替换的类的查找目录，作为参数传递给GenRenameClasses.sh脚本使用，最终获取到的类名称保存到配置文件中，以给后续步骤使用
-class_search_dir="$(pwd)/../injectedContentKit/Business"
+class_search_dir=""
 # class_search_dir="$(pwd)/../injectedContentKit/Business"
 # class_search_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Business"
 # 配置文件
