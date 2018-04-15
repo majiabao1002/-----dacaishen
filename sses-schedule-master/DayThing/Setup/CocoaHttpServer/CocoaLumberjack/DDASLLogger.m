@@ -1,0 +1,58 @@
+#import "DDASLLogger.h"
+#import <libkern/OSAtomic.h>
+#if ! __has_feature(objc_arc)
+#warning This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+@implementation DDASLLogger
+static DDASLLogger *sharedInstance;
++ (void)initialize
+{
+	static BOOL initialized = NO;
+	if (!initialized)
+	{
+		initialized = YES;
+		sharedInstance = [[DDASLLogger alloc] init];
+	}
+}
++ (DDASLLogger *)sharedInstance
+{
+	return sharedInstance;
+}
+- (id)init
+{
+	if (sharedInstance != nil)
+	{
+		return nil;
+	}
+	if ((self = [super init]))
+	{
+		client = asl_open(NULL, "com.apple.console", 0);
+	}
+	return self;
+}
+- (void)logMessage:(DDLogMessage *)logMessage
+{
+	NSString *logMsg = logMessage->logMsg;
+	if (formatter)
+	{
+		logMsg = [formatter formatLogMessage:logMessage];
+	}
+	if (logMsg)
+	{
+		const char *msg = [logMsg UTF8String];
+		int aslLogLevel;
+		switch (logMessage->logFlag)
+		{
+			case LOG_FLAG_ERROR : aslLogLevel = ASL_LEVEL_CRIT;    break;
+			case LOG_FLAG_WARN  : aslLogLevel = ASL_LEVEL_ERR;     break;
+			case LOG_FLAG_INFO  : aslLogLevel = ASL_LEVEL_WARNING; break;
+			default             : aslLogLevel = ASL_LEVEL_NOTICE;  break;
+		}
+		asl_log(client, NULL, aslLogLevel, "%s", msg);
+	}
+}
+- (NSString *)loggerName
+{
+	return @"cocoa.lumberjack.aslLogger";
+}
+@end
